@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace MaximumNumber
 {
-    public class FindMaxNumber
+    public class FindMaxNumber<T> where T : IComparable
     {
-        public int FindMaxValueOfThree(int firstNumber, int secondNumber, int thirdNumber)
+        
+        public T FindMaxValueOfThree(T firstNumber, T secondNumber, T thirdNumber)
         {
             if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
             {
@@ -25,7 +26,7 @@ namespace MaximumNumber
 
         }
 
-        public float FloatMaxValueOfThree(float firstNumber, float secondNumber, float thirdNumber)
+        public T FloatMaxValueOfThree(T firstNumber, T secondNumber, T thirdNumber)
         {
             if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
             {
@@ -41,7 +42,7 @@ namespace MaximumNumber
             }
         }
 
-        public string StringMaxValueOfThree( string firstString, string secondString, string thirdString)
+        public T StringMaxValueOfThree( T firstString, T secondString, T thirdString)
         {
             if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
             {
