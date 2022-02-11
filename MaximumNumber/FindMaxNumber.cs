@@ -24,5 +24,21 @@ namespace MaximumNumber
             }
 
         }
+
+        public float FloatMaxValueOfThree(float firstNumber, float secondNumber, float thirdNumber)
+        {
+            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
+            {
+                return firstNumber;
+            }
+            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
+            {
+                return secondNumber;
+            }
+            else
+            {
+                return thirdNumber;
+            }
+        }
     }
 }
